@@ -1,0 +1,30 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Generates a team profile with input gathered through command line",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeChristianson/TeamProfileGenerator.git"
+  },
+  "keywords": [
+    "team",
+    "profile"
+  ],
+  "author": "Joe Christianson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoeChristianson/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/JoeChristianson/TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2",
+    "jest": "^27.5.1"
+  }
+}
