@@ -1,4 +1,5 @@
 const Manager = require("../lib/Manager")
+const {format} = require("prettier")
 
 describe("Manager",()=>{
     describe("Initialization",()=>{
@@ -21,6 +22,25 @@ describe("Manager",()=>{
                 officeNumber:1
             })
             expect(manager.getRole()).toEqual("Manager")
+        })
+    })
+    describe("Generate Card",()=>{
+        it("should generate correct html",()=>{
+            const employee = new Manager({name:"Jane",email:"jane@jane.com",id:1,officeNumber:1});
+            expect(format(employee.generateCard(),{parser:"html"})).toEqual(
+            format(`<div class="card">
+                <header>
+                    <h4 class="name">Jane</h4>            
+                    <h4 class="role"><img src="./icons/coffee.png">Manager</h4>
+                </header>
+                <section class="details">
+                    <div class="id">ID: 1</div>
+                    <div class="email">Email: <a href="mailto: jane@jane.com">jane@jane.com</a></div>
+                    <div class="special">Office Number: 1</div>
+                </section>
+            </div>
+            `,{parser:"html"})                
+            )
         })
     })
 })

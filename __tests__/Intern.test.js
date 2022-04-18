@@ -1,4 +1,5 @@
 const Intern = require("../lib/Intern")
+const {format} = require("prettier")
 
 describe("Intern",()=>{
     describe("Initialization",()=>{
@@ -32,6 +33,25 @@ describe("Intern",()=>{
                 school:"University of Maryland"
            })
            expect(intern.getSchool()).toEqual("University of Maryland")
+        })
+    })
+    describe("Generate Card",()=>{
+        it("should generate correct html",()=>{
+            const employee = new Intern({name:"Jane",email:"jane@jane.com",id:1,school:"University of Maryland"});
+            expect(format(employee.generateCard(),{parser:"html"})).toEqual(
+            format(`<div class="card">
+                <header>
+                    <h4 class="name">Jane</h4>            
+                    <h4 class="role"><img src="./icons/graduate.png">Intern</h4>
+                </header>
+                <section class="details">
+                    <div class="id">ID: 1</div>
+                    <div class="email">Email: <a href="mailto: jane@jane.com">jane@jane.com</a></div>
+                    <div class="special">School: University of Maryland</div>
+                </section>
+            </div>
+            `,{parser:"html"})                
+            )
         })
     })
 })

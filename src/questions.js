@@ -15,6 +15,7 @@ const questions = {
             type:"input",
             name:"name",
             message:"What is their name?",
+
         },
         {
             type:"input",
