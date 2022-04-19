@@ -8,8 +8,8 @@ const generateHTML = (teamName,teammates)=>{
     <html>
     <head>
     <title>Team Page</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
     </head>
     <header>
     <h1>${teamName} Team</h1>

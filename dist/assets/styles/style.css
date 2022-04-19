@@ -3,11 +3,11 @@
 }
 
 :root{
-    --main-bg:rgb(250, 246, 246);
-    --header-bg:rgb(10, 10, 11);
-    --header-color:white;
-    --card-header-bg:rgb(161, 161, 161);
-    --card-header-color:rgb(215, 215, 215);
+    --main-bg:hsl(214, 100%, 99%);
+    --header-bg:hsl(214, 100%, 40%);
+    --header-color:hsl(90, 100%, 95%);
+    --card-header-bg:hsl(214, 100%, 60%);
+    --card-header-color:hsl(214, 100%, 99%);
 
 }
 
@@ -20,6 +20,7 @@ body>header{
     text-align: center;
     color:var(--header-color);
     padding: 1em;
+    
 }
 
 header>h1{
@@ -29,7 +30,7 @@ header>h1{
 main{
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 20px 40px;
     flex-wrap: wrap;
 }
 
@@ -48,6 +49,7 @@ main{
     color: var(--card-header-color);
     padding: 10px;
     border-radius: 25px 25px 0 0 ;
+    text-align: center;
 }
 h4{
     margin: 0 auto;
